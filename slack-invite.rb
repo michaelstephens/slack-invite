@@ -10,8 +10,8 @@ require 'http'
 class SlackInvite
   attr_reader :api_token, :subdomain
   def initialize(api_token, subdomain)
-    @api_token = ENV["SLACK_API_TOKEN"]
-    @subdomain = ENV["SLACK_SUBDOMAIN"]
+    @api_token = api_token
+    @subdomain = subdomain
   end
 
   def send_invite(email)
